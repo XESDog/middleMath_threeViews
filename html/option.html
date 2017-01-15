@@ -1,0 +1,23 @@
+<div id="option">
+    <div>
+        <!--占位，使3D模型显示区域居中-->
+        <div></div>
+        <!--3D模型显示区域-->
+        <three :mesh="mesh"></three>
+        <div>
+            <div>
+                <button class="normal-button" v-on:click="gotoPhotograph">视图拍照</button>
+            </div>
+            <div>
+                <button class="normal-button" v-on:click="gotoCustom">自定义模型</button>
+            </div>
+        </div>
+    </div>
+    <div class="control-bar-list">
+        <button v-on:click='left'><</button>
+        <button class='img-btn' v-on:click='click(item)' v-for="item in list">
+            <img :src="images[item]">
+        </button>
+        <button v-on:click='right'>></button>
+    </div>
+</div>

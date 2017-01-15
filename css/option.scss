@@ -1,0 +1,75 @@
+@import "var";
+
+$webGL-output-height: 3.1rem;
+
+#option {
+  > :first-child {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.4rem;
+    > :first-child{
+      width: 1.55rem;//跟右侧按钮宽度一样
+    }
+    #threeDiv {
+      height: $webGL-output-height;
+      background-color: rgba(0, 0, 0, 0);
+    }
+    > :nth-last-child(1) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+  .control-bar-list {
+    height: $control-bar-height;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    //左箭头
+    :first-child {
+      border: {
+        top-left-radius: $border-radius;
+        bottom-left-radius: $border-radius;
+      }
+      flex-grow: 0.4;
+    }
+    //右箭头
+    :nth-last-child(1) {
+      border: {
+        top-right-radius: $border-radius;
+        bottom-right-radius: $border-radius;
+        style: solid;
+      }
+      flex-grow: 0.4;
+    }
+
+    /**
+    3D模型选择按钮
+     */
+    button {
+      flex-grow: 1;
+      background-color: $color-5;
+      color: white;
+      outline: none;
+      border: {
+        style: solid none solid solid;
+        width: $border-size;
+        color: $color-3;
+      }
+      cursor: pointer;
+      &:hover {
+        background-color: $color-4;
+      }
+      img {
+        height: 1.1rem;
+      }
+    }
+
+  }
+}
+
+
+
+
+

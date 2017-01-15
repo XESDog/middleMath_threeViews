@@ -1,0 +1,84 @@
+@charset "UTF-8";
+.normal-button {
+  font-size: 0.24rem;
+  color: white;
+  line-height: 1.2;
+  width: 1.55rem;
+  height: 0.45rem;
+  border: 0.01rem solid #00c1f9;
+  border-radius: 0.08rem;
+  background-color: rgba(0, 126, 255, 0.1);
+  outline: none;
+  cursor: pointer; }
+  .normal-button:hover {
+    background-color: #0053b9; }
+
+.pop-title {
+  border: 0.01rem solid #009fff;
+  border-bottom-style: none;
+  border-top-left-radius: 0.08rem;
+  border-top-right-radius: 0.08rem;
+  background-color: #103d91;
+  font-size: 0.32rem;
+  color: #ffd200;
+  text-align: center; }
+  .pop-title .closeBtn {
+    position: absolute;
+    right: 0.1rem;
+    top: 0.06rem; }
+
+.grid {
+  border-collapse: collapse; }
+  .grid td {
+    width: 0.55rem;
+    height: 0.52rem;
+    border-width: 0.01rem;
+    border-style: dashed;
+    text-align: center;
+    cursor: pointer; }
+
+#option > :first-child {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem; }
+  #option > :first-child > :first-child {
+    width: 1.55rem; }
+  #option > :first-child #threeDiv {
+    height: 3.1rem;
+    background-color: transparent; }
+  #option > :first-child > :nth-last-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
+#option .control-bar-list {
+  height: 1.27rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /**
+  3D模型选择按钮
+   */ }
+  #option .control-bar-list :first-child {
+    border-top-left-radius: 0.08rem;
+    border-bottom-left-radius: 0.08rem;
+    flex-grow: 0.4; }
+  #option .control-bar-list :nth-last-child(1) {
+    border-top-right-radius: 0.08rem;
+    border-bottom-right-radius: 0.08rem;
+    border-style: solid;
+    flex-grow: 0.4; }
+  #option .control-bar-list button {
+    flex-grow: 1;
+    background-color: #0053b9;
+    color: white;
+    outline: none;
+    border-style: solid none solid solid;
+    border-width: 0.01rem;
+    border-color: #009fff;
+    cursor: pointer; }
+    #option .control-bar-list button:hover {
+      background-color: #103d91; }
+    #option .control-bar-list button img {
+      height: 1.1rem; }
+
+/*# sourceMappingURL=option.css.map */

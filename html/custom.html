@@ -1,0 +1,47 @@
+<!--自定义模型-->
+
+<dialog open id="custom">
+    <div class="pop-title">
+        <p>自定义模型</p>
+        <div v-on:click="close" class="closeBtn"></div>
+    </div>
+    <div class="custom-content">
+        <div id="combination" v-if='status==0'>
+            <div>
+                <table class="key-table">
+                    <tr v-for="(item ,i) in keys">
+                        <td v-for="(e ,j) in item"
+                            draggable="true"
+                            v-on:dragstart="drag($event,i,j)"
+                            :class="{active:currentKey[0]==i&&currentKey[1]==j}">{{e}}
+                        </td>
+                    </tr>
+                </table>
+                <table class="grid">
+                    <tr v-for="(item,i) in tds">
+                        <td v-for="(e,j) in item"
+                            draggable="true"
+                            v-on:dragover="dragOver"
+                            v-on:drop="drop($event,i,j)"
+                            v-on:dragstart="dragToSelf($event,i,j)">{{map[i*tdCol+j]!=0?map[i*tdCol+j]:''}}
+                        </td>
+                    </tr>
+                </table>
+                <button id="create" class='normal-button' v-on:click="gotoDescribe">生成</button>
+            </div>
+            <button id="clean" class='normal-button' v-on:click="cleanMap">清除</button>
+            <p>俯视图</p>
+        </div>
+        <div id="describe" v-if="status==1">
+            <table class="grid">
+                <tr v-for="(item,i) in tds">
+                    <td v-for="(e,j) in item">{{map[i*tdCol+j]!=0?map[i*tdCol+j]:''}}
+                    </td>
+                </tr>
+            </table>
+            <three :mesh="mesh"></three>
+            <button class='normal-button' v-on:click="gotoPhotograph">拍照</button>
+            <button class='normal-button' v-on:click="gotoGenerate">还原</button>
+        </div>
+    </div>
+</dialog>

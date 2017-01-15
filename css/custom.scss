@@ -1,0 +1,93 @@
+@import "var";
+
+$key-btn-width: 0.6rem;
+$key-btn-height: 0.6rem;
+$custom-content-padding: 0.5rem;
+$margin:0.4rem;
+
+#custom {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  width: 84%;
+  padding: 0px;
+  position: absolute;
+  top: 0.4rem;
+  z-index: 1000;
+}
+
+//弹框内容
+.custom-content {
+  border: $border-size solid $color-3;
+  border-bottom-right-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+  color: white;
+  position: relative;
+  height: 5rem;
+  #combination {
+    .key-table {
+      margin: $margin;
+      border-collapse: collapse;
+      td {
+        border: $border-size solid $color-3;
+        width: $key-btn-width;
+        height: $key-btn-height;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+    >:first-child{
+      display: flex;
+      justify-content: space-between;
+
+
+      #create{
+        margin-top: $margin;
+        margin-right: $margin;
+      }
+      .grid {
+        margin-top: $margin;
+      }
+    }
+    //清除按钮
+    #clean {
+      margin: $margin;
+      width: $key-btn-width*2;
+    }
+
+    > p {
+      position: absolute;
+      top: 4rem;
+      left: 3.6rem;
+    }
+
+  }
+  #describe {
+    height: 80%;
+    .grid {
+      position: absolute;
+      top: 0px;
+      margin: $margin;
+      td {
+        width: 0.3rem;
+        height: 0.28rem;
+        line-height: 0.28rem;
+      }
+    }
+    #threeDiv{
+      margin: $margin $margin $margin $margin*7;
+      height: 100%;
+    }
+
+    >:nth-last-child(2){
+      position: absolute;
+      top:2.4rem;
+      margin:$margin ;
+    }
+    >:nth-last-child(1){
+      position: absolute;
+      top:3rem;
+      margin:$margin ;
+    }
+  }
+}
+

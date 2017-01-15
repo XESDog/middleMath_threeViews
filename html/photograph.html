@@ -1,0 +1,22 @@
+<dialog open id="photograph">
+    <div class="pop-title">
+        <!--占左边位置，让title显示在中间-->
+        <p>视图拍照</p>
+        <div v-on:click="close" class="closeBtn"></div>
+    </div>
+    <table class="view-table">
+        <tbody>
+            <tr>
+                <td v-on:click="primaryView">主视图</td>
+                <td v-on:click="topView">俯视图</td>
+            </tr>
+            <tr>
+                <td v-on:click="leftView">左视图</td>
+                <td>
+                    <three :mesh="mesh" :view="view"></three>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</dialog>

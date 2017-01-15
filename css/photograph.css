@@ -1,0 +1,65 @@
+.normal-button {
+  font-size: 0.24rem;
+  color: white;
+  line-height: 1.2;
+  width: 1.55rem;
+  height: 0.45rem;
+  border: 0.01rem solid #00c1f9;
+  border-radius: 0.08rem;
+  background-color: rgba(0, 126, 255, 0.1);
+  outline: none;
+  cursor: pointer; }
+  .normal-button:hover {
+    background-color: #0053b9; }
+
+.pop-title {
+  border: 0.01rem solid #009fff;
+  border-bottom-style: none;
+  border-top-left-radius: 0.08rem;
+  border-top-right-radius: 0.08rem;
+  background-color: #103d91;
+  font-size: 0.32rem;
+  color: #ffd200;
+  text-align: center; }
+  .pop-title .closeBtn {
+    position: absolute;
+    right: 0.1rem;
+    top: 0.06rem; }
+
+.grid {
+  border-collapse: collapse; }
+  .grid td {
+    width: 0.55rem;
+    height: 0.52rem;
+    border-width: 0.01rem;
+    border-style: dashed;
+    text-align: center;
+    cursor: pointer; }
+
+#photograph {
+  position: absolute;
+  z-index: 1000;
+  top: 0.5rem;
+  background-color: transparent;
+  border: none;
+  width: 84%;
+  padding: 0px;
+  color: white; }
+  #photograph .view-table {
+    width: 100%;
+    height: 5.2rem;
+    border: 0.01rem solid #00c1f9;
+    border-bottom-left-radius: 0.08rem;
+    border-bottom-right-radius: 0.08rem; }
+    #photograph .view-table tbody {
+      height: 100%; }
+      #photograph .view-table tbody tr {
+        width: 100%; }
+        #photograph .view-table tbody tr td {
+          width: 50%;
+          height: 50%;
+          cursor: pointer;
+          text-align: center;
+          border: 0.01rem solid #00c1f9; }
+
+/*# sourceMappingURL=photograph.css.map */

@@ -1,0 +1,62 @@
+$control-bar-height: 1.27rem;
+$btn-font-size: 0.28rem;
+
+$custom-title-font-size: 0.32rem;
+
+$border-size: 0.01rem;
+$border-radius: 0.08rem;
+
+$color-1: rgb(0, 193, 249);
+$color-2: rgba(0, 126, 255, 0.1);
+$color-3: rgb(0, 159, 255);
+$color-4: rgb(16, 61, 145);
+$color-5: rgb(0, 83, 185);
+$color-6: rgb(0, 246, 255);
+$color-7: rgb(255, 210, 0);
+
+.normal-button {
+  font-size: 0.24rem;
+  color: white;
+  line-height: 1.2;
+  width: 1.55rem;
+  height: 0.45rem;
+  border: $border-size solid $color-1;
+  border-radius: $border-radius;
+  background-color: $color-2;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    background-color: $color-5;
+  }
+}
+//弹框标题
+.pop-title {
+  border: $border-size solid $color-3;
+  border-bottom-style: none;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  background-color: $color-4;
+  font-size: $custom-title-font-size;
+  color: $color-7;
+  text-align: center;
+  .closeBtn{
+    position: absolute;
+    right: 0.1rem;
+    top:0.06rem;
+  }
+}
+.grid {
+  border: {
+    collapse: collapse;
+  }
+  td {
+    width: 0.55rem;
+    height: 0.52rem;
+    border: {
+      width: $border-size;
+      style: dashed;
+    }
+    text-align: center;
+    cursor: pointer;
+  }
+}
